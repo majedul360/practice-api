@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>resturent</title>
+    <!-- bootstrap  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/119f489d3b.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .search {
+        position: relative;
+        z-index: 2000;
+      }
+      .food-details {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+      .food-details.active {
+        display: none;
+      }
+      i {
+        position: relative;
+        left: 32.5rem;
+        bottom: 2rem;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search container">
+      <h1 class="text-center my-4">Resturent</h1>
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="search here by food name"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+        />
+        <button class="btn btn-outline-secondary" type="button" id="button">
+          Button
+        </button>
+      </div>
+      <!-- error -->
+      <p class="error text-center text-danger"></p>
+    </div>
+    <!-- foods -->
+    <div class="foods container">
+      <div class="row row-cols-1 row-cols-md-3 g-4"></div>
+    </div>
+    <!-- food details -->
+    <div class="food-details active"></div>
+    <!-- custom js  -->
+    <script src="js/food-iteam.js"></script>
+  </body>
+</html>
