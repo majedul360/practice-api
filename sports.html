@@ -12,9 +12,64 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <style>
+      .male-player {
+        display: none;
+      }
+
+      .female-player {
+        display: none;
+      }
+      #pre-loader {
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <section></section>
+    <section class="container">
+      <div class="row">
+        <div class="col-6">
+          <h2 class="text-center mb-3">Players</h2>
+          <!-- search  -->
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="enter your player name"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="search-btn"
+            >
+              Button
+            </button>
+          </div>
+          <!-- preloader  -->
+          <img
+            class="mx-auto"
+            src="img/Spinning arrows.gif"
+            id="pre-loader"
+            alt=""
+          />
+          <!-- error  -->
+          <p class="error text-center text-danger"></p>
+
+          <!-- display players  -->
+          <div class="player-container text-center"></div>
+        </div>
+        <div class="col-6">
+          <h2 class="text-center mb-2">Player details</h2>
+          <div class="player-details-container">
+            <img src="img/male.jpg" alt="" class="male-player" />
+            <img src="img/female.jpg" alt="" class="female-player" />
+            <div class="player-details"></div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- custom js  -->
     <script src="js/sports.js"></script>
   </body>
